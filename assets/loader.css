@@ -1,0 +1,21 @@
+.page-loader { display: none }
+html.is-loading body > :not(.page-loader) { visibility: hidden }
+html.is-loading main *, html.is-loading main *::before, html.is-loading main *::after { animation-play-state: paused !important }
+html.is-loading .page-loader, html.is-loaded .page-loader { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; padding: 24px; background: #f8faf9; color: #474848 }
+.page-loader-inner { display: flex; flex-direction: column; align-items: center; gap: 24px; text-align: center }
+.page-loader-name { font: 750 13px/1.4 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: .16em; text-transform: uppercase }
+.page-loader-track { display: flex; align-items: center; gap: 13px; position: relative; padding: 8px 2px }
+.page-loader-track::before { content: ''; position: absolute; top: 50%; right: 12px; left: 12px; height: 2px; background: #d5e2e3; transform: translateY(-50%) }
+.page-loader-track i { position: relative; width: 18px; height: 18px; background: #497785; clip-path: polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%); animation: loader-node 1.45s ease-in-out infinite }
+.page-loader-track i:nth-child(2) { animation-delay: .16s }
+.page-loader-track i:nth-child(3) { animation-delay: .32s }
+.page-loader-track i:nth-child(4) { animation-delay: .48s }
+.page-loader-track i:nth-child(5) { animation-delay: .64s }
+.page-loader-label { color: #58686b; font: 650 10px/1.5 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: .14em; text-transform: uppercase }
+.page-loader-progress { margin-top: -16px; color: #497785; font: 650 10px/1.5 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: .12em }
+.page-loader-continue { margin-top: 4px; padding: 10px 15px; border: 1px solid #497785; border-radius: 7px; background: #497785; color: #fff; font: 650 12px/1.5 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; cursor: pointer }
+.page-loader-continue:focus-visible { outline: 3px solid #c27e2a; outline-offset: 3px }
+html.is-loaded .page-loader { opacity: 0; pointer-events: none; transition: opacity .35s ease }
+@keyframes loader-node { 0%, 65%, 100% { background: #497785; transform: scale(.78) } 30% { background: #c27e2a; transform: scale(1.12) } }
+@media (prefers-reduced-motion: reduce) { .page-loader-track i { animation: none; transform: none } .page-loader-track i:nth-child(3) { background: #c27e2a } html.is-loaded .page-loader { transition: none } }
+@media print { .page-loader { display: none !important } html.is-loading body > :not(.page-loader) { visibility: visible } }
