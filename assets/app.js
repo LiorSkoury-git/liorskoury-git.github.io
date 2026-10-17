@@ -81,7 +81,7 @@ for(const imageLink of document.querySelectorAll('[data-demo-reveal]')){
   function moveAtX(clientX){
     const bounds=imageLink.getBoundingClientRect();
     const position=Math.max(0,Math.min(1,(clientX-bounds.left)/bounds.width));
-    pointerTarget=110-position*120;
+    pointerTarget=position*120-10;
     moveTo(pointerTarget);
   }
   function updateReveal(event){
