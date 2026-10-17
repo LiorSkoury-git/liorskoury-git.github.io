@@ -74,6 +74,8 @@ html:has(.site-header.has-submenu) { scroll-padding-top: 128px }
 .hero .eyebrow { max-width: 530px; line-height: 1.7 }
 .hero h1 { font-weight: 680; max-width: 700px; margin-top: 27px; line-height: 1.04; letter-spacing: -.067em }
 .hero-intro { margin-top: 28px; max-width: 590px; font-size: 17px; line-height: 1.8 }
+.hero-intro a { text-decoration: underline; text-decoration-color: var(--accent-orange); text-underline-offset: 3px }
+.hero-intro a:hover { color: var(--green) }
 .hero-actions { margin-top: 35px; gap: 26px }
 .button { background: var(--green); border-color: var(--green); border-radius: 8px; padding: 13px 18px; font-weight: 650; font-size: 12px }
 .button:hover { background: #355e69 }
@@ -149,8 +151,9 @@ html:has(.site-header.has-submenu) { scroll-padding-top: 128px }
 .actor-full-svg, .service-full-svg { display: block; width: 100%; height: auto; overflow: visible }
 .actor-full-svg { aspect-ratio: 1795.3 / 998.81 }
 .service-full-svg { aspect-ratio: 1684.24 / 825.07 }
-.interface-video { width: 100%; max-width: 100%; margin: 30px 0 0; overflow: hidden }
+.interface-video { position: relative; width: 100%; max-width: 100%; margin: 30px 0 0; overflow: hidden }
 .interface-video video { display: block; width: 100%; height: auto; max-height: min(60vh, 620px); object-fit: contain; margin-inline: auto; border-radius: 10px }
+.interface-video-play { position: absolute; right: 12px; bottom: 12px; padding: 9px 14px; border: 1px solid #829091; border-radius: 8px; background: var(--ink); color: var(--paper); font-size: 12px; font-weight: 650 }
 .actor-node, .service-node { cursor: pointer; transform-box: fill-box; transform-origin: center; transform: translate(var(--push-x,0px),var(--push-y,0px)) scale(var(--node-scale,1)); transition: transform .24s ease, filter .24s ease }
 .actor-node:hover, .actor-node:focus-visible, .actor-node.is-active, .service-node:hover, .service-node:focus-visible, .service-node.is-active { --node-scale: 1.07; filter: drop-shadow(0 12px 14px rgba(71,72,72,.25)) }
 .actor-node[aria-pressed="true"], .service-node[aria-pressed="true"] { --node-scale: 1.05 }

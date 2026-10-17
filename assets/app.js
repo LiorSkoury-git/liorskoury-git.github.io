@@ -424,17 +424,21 @@ const serviceNodes=[...(serviceSvg?.querySelectorAll(':scope > [data-service-nod
 let serviceAnimations=[];
 let serviceRevealTimer;
 const interfaceVideo=document.querySelector('[data-interface-video]');
-if(interfaceVideo && matchMedia('(max-width: 700px)').matches)interfaceVideo.controls=true;
+const interfaceVideoPlay=document.querySelector('[data-interface-video-play]');
 let interfaceVisible=true;
+function startInterfaceVideo(){
+  const playback=interfaceVideo.play();
+  playback?.then(()=>{if(interfaceVideoPlay)interfaceVideoPlay.hidden=true;},()=>{if(interfaceVideoPlay)interfaceVideoPlay.hidden=false;});
+}
 function syncInterfaceVideo(){
   if(!interfaceVideo)return;
   if(document.hidden || !interfaceVisible || document.getElementById('tab-interfaces')?.getAttribute('aria-selected')!=='true'){
     interfaceVideo.pause();
     return;
   }
-  const playback=interfaceVideo.play();
-  playback?.catch(()=>{ interfaceVideo.controls=true; });
+  startInterfaceVideo();
 }
+interfaceVideoPlay?.addEventListener('click',startInterfaceVideo);
 document.addEventListener('visibilitychange',syncInterfaceVideo);
 if(interfaceVideo && 'IntersectionObserver' in window){
   interfaceVisible=false;
