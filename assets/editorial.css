@@ -1168,10 +1168,6 @@ h3 { font-size: 19px }
 .handoff-scene svg { display: block; width: 100%; height: 100% }
 .handoff-scene--second { opacity: 0 }
 .handoff-svg--first > line:nth-of-type(n+2) { stroke-dasharray: 40 }
-.handoff-animation.show-both { aspect-ratio: auto; display: grid; gap: 20px; overflow: visible }
-.handoff-animation.show-both .handoff-scene { position: static }
-.handoff-animation.show-both .handoff-scene--second { opacity: 1 }
-.handoff-animation.show-both .handoff-scene svg { height: auto }
 .handoff-animation.is-manual .handoff-scene { opacity: 0 !important }
 .handoff-animation.is-manual .handoff-scene.is-selected { opacity: 1 !important }
 .thread-animation { display: grid; gap: 26px; background: transparent }
@@ -1179,13 +1175,13 @@ h3 { font-size: 19px }
 .thread-scene svg { display: block; width: 100%; height: auto; overflow: visible }
 .thread-scene--chart { max-width: 420px }
 .thread-scene--totals { max-width: 286px }
-.thread-animation.is-animated { position: relative; display: block; aspect-ratio: 538.58 / 411; overflow: hidden }
-.thread-animation.is-animated .thread-scene { position: absolute; inset: 0; max-width: none; align-items: start }
-.thread-animation.is-animated .thread-scene svg { max-width: 100%; max-height: 100% }
-.thread-animation.is-animated .thread-scene--flow svg { width: 100%; height: auto }
+.thread-animation.is-animated,.thread-animation.is-manual { position: relative; display: block; aspect-ratio: 538.58 / 411; overflow: hidden }
+.thread-animation.is-animated .thread-scene,.thread-animation.is-manual .thread-scene { position: absolute; inset: 0; max-width: none; align-items: start }
+.thread-animation.is-animated .thread-scene svg,.thread-animation.is-manual .thread-scene svg { max-width: 100%; max-height: 100% }
+.thread-animation.is-animated .thread-scene--flow svg,.thread-animation.is-manual .thread-scene--flow svg { width: 100%; height: auto }
 /* Widths preserve each SVG's aspect ratio and leave room for its edge labels. */
-.thread-animation.is-animated .thread-scene--chart svg { width: 68%; height: auto }
-.thread-animation.is-animated .thread-scene--totals svg { width: 52.1%; height: auto }
+.thread-animation.is-animated .thread-scene--chart svg,.thread-animation.is-manual .thread-scene--chart svg { width: 68%; height: auto }
+.thread-animation.is-animated .thread-scene--totals svg,.thread-animation.is-manual .thread-scene--totals svg { width: 52.1%; height: auto }
 .thread-animation.is-animated .thread-scene--chart,.thread-animation.is-animated .thread-scene--totals { opacity: 0 }
 .thread-animation.is-manual .thread-scene { opacity: 0 !important }
 .thread-animation.is-manual .thread-scene.is-selected { opacity: 1 !important }
@@ -1195,15 +1191,15 @@ h3 { font-size: 19px }
 .system-scene { min-width: 0; display: grid; place-items: center }
 .system-scene svg { display: block; width: 100%; height: auto; overflow: visible }
 .system-scene svg text,.system-scene svg tspan { font-family: Calibri, Arial, sans-serif }
-.system-animation.is-animated { position: relative; display: block; aspect-ratio: 1053.29 / 750.07; overflow: hidden }
+.system-animation.is-animated,.system-animation.is-manual { position: relative; display: block; aspect-ratio: 1053.29 / 750.07; overflow: hidden }
 .system-animation.is-animated:not(.is-manual) { cursor: pointer }
 .system-animation.is-animated:focus-visible { outline: 3px solid #167b86; outline-offset: 4px }
 .system-animation.is-animated.is-paused::after { content: 'Paused · click to continue'; position: absolute; right: 12px; bottom: 12px; padding: 7px 10px; border-radius: 4px; color: #fff; background: rgba(28, 55, 59, .82); font: 600 13px Arial, sans-serif; pointer-events: none }
-.system-animation.is-animated .system-scene { position: absolute; inset: 0; opacity: 0; pointer-events: none; transition: opacity .3s ease }
+.system-animation.is-animated .system-scene,.system-animation.is-manual .system-scene { position: absolute; inset: 0; opacity: 0; pointer-events: none; transition: opacity .3s ease }
 .system-animation.is-animated .system-scene.is-active { opacity: 1 }
 .system-animation.is-manual .system-scene { opacity: 0 !important; transition: none }
 .system-animation.is-manual .system-scene.is-selected { opacity: 1 !important }
-.system-animation.is-animated .system-scene svg { max-width: 100%; max-height: 100% }
+.system-animation.is-animated .system-scene svg,.system-animation.is-manual .system-scene svg { max-width: 100%; max-height: 100% }
 .system-svg--sequence circle,.system-svg--sequence line,.system-svg--sequence text { transition: fill .22s ease, stroke .22s ease, opacity .22s ease }
 .system-svg--sequence circle.is-reached.system-sequence-cls-2 { fill: #79aeba; stroke: #315e69; stroke-width: 1.5px }
 .system-svg--sequence circle.is-reached.system-sequence-cls-3 { fill: #dba16e; stroke: #9a5d24; stroke-width: 1.5px }
@@ -1233,15 +1229,6 @@ h3 { font-size: 19px }
 .system-overview-packet { stroke: #fff; stroke-width: 2.5px; filter: drop-shadow(0 0 5px rgba(71,72,72,.6)); pointer-events: none }
 .system-overview-packet--forward { fill: #b87f2b }
 .system-overview-packet--response { fill: #28766c }
-@media (prefers-reduced-motion: reduce) {
-  [data-diagram-scroller] { display: none }
-  .story-figure.is-diagram-enhanced .story-diagram-caption-text:not(.is-current) { display: block }
-  .handoff-animation { aspect-ratio: auto; display: grid; gap: 20px; overflow: visible }
-  .handoff-scene { position: static }
-  .handoff-scene--second { opacity: 1 }
-  .handoff-scene svg { height: auto }
-}
-
 .image-dialog { width: min(1200px, calc(100% - 32px)); max-width: none; max-height: calc(100dvh - 32px); padding: clamp(12px, 2vw, 24px); border: 0; border-radius: 14px; background: #fff; color: var(--ink); box-shadow: 0 24px 80px rgba(0,0,0,.25) }
 .image-dialog::backdrop { background: rgba(38,47,48,.8) }
 .image-dialog .dialog-head { margin-bottom: 16px }

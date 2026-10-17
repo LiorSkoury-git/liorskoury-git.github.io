@@ -450,7 +450,7 @@ function stopActorReveal(){
 }
 function revealActors(){
   stopActorReveal();
-  if(!actorSvg || !actorNodes.length || matchMedia('(prefers-reduced-motion: reduce), (max-width: 700px)').matches || !Element.prototype.animate)return;
+  if(!actorSvg || !actorNodes.length || matchMedia('(prefers-reduced-motion: reduce)').matches || !Element.prototype.animate)return;
   const origin=actorNodes.find(node=>node.dataset.actorName==='TWICO');
   if(!origin)return;
   const start=origin.getBBox();
@@ -480,7 +480,7 @@ function stopServiceReveal(){
 }
 function revealServices(){
   stopServiceReveal();
-  if(!serviceSvg || !serviceNodes.length || matchMedia('(prefers-reduced-motion: reduce), (max-width: 700px)').matches || !Element.prototype.animate)return;
+  if(!serviceSvg || !serviceNodes.length || matchMedia('(prefers-reduced-motion: reduce)').matches || !Element.prototype.animate)return;
   const origin=serviceNodes.find(node=>node.dataset.serviceName==='TWICO');
   if(!origin)return;
   const start=origin.getBBox();
@@ -556,7 +556,7 @@ async function selectTab(tab,manual=true){
   if(tabTransitioning){queuedTab=tab;queuedTabManual=manual;return;}
   if(tab.getAttribute('aria-selected')==='true')return;
   const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(!systemTabHighlight?.animate || reducedMotion || matchMedia('(max-width: 600px)').matches){
+  if(!systemTabHighlight?.animate || reducedMotion){
     activateTab(tab);
     if(!manual)scheduleTabRotation();
     return;
@@ -602,7 +602,7 @@ if(systemExplorer && tabs.length>1 && !matchMedia('(prefers-reduced-motion: redu
   window.addEventListener('resize',scheduleTabRotation);
 }
 const threadDiagram=document.querySelector('[data-thread-diagram]');
-if(threadDiagram && 'IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce), (max-width: 700px)').matches){
+if(threadDiagram && 'IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
   threadDiagram.classList.add('is-pending');
   const threadObserver=new IntersectionObserver(entries=>{
     if(entries.some(entry=>entry.isIntersecting)){
@@ -615,7 +615,7 @@ if(threadDiagram && 'IntersectionObserver' in window && !matchMedia('(prefers-re
 }
 
 if(erdImage){
-  if(!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce), (max-width: 700px)').matches){
+  if(!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches){
     erdImage.src=erdImage.dataset.staticSrc;
     erdImage.hidden=false;
   }else{
@@ -956,10 +956,13 @@ if(handoffAnimation){
     handoffAnimation.classList.remove('is-manual');
     handoffAnimation.querySelectorAll('.handoff-scene').forEach(scene=>scene.classList.remove('is-selected'));
     scroller.update(0);
-    scroller.show(!reducedMotion.matches);
-    if(reducedMotion.matches)return;
-    if(typeof handoffAnimation.animate!=='function'){handoffAnimation.classList.add('show-both');scroller.show(false);return;}
-    handoffAnimation.classList.remove('show-both');
+    scroller.show(true);
+    if(reducedMotion.matches || typeof handoffAnimation.animate!=='function'){
+      manualIndex=0;
+      handoffAnimation.classList.add('is-manual');
+      handoffAnimation.querySelector('.handoff-scene--first').classList.add('is-selected');
+      return;
+    }
     animate('.handoff-scene--first',[
       {opacity:1,offset:0},{opacity:1,offset:.42},{opacity:0,offset:.49},
       {opacity:0,offset:.89},{opacity:1,offset:.96},{opacity:1,offset:1}
@@ -1080,11 +1083,14 @@ if(threadAnimation){
     manualIndex=null;
     threadAnimation.classList.remove('is-manual');
     Object.values(scenes).forEach(scene=>scene.classList.remove('is-selected'));
-    scroller.show(!reducedMotion.matches);
+    scroller.show(true);
     scroller.update(0);
     if(reducedMotion.matches){
+      manualIndex=0;
       updatePlayback();
       threadAnimation.classList.remove('is-animated');
+      threadAnimation.classList.add('is-manual');
+      scenes.flow.classList.add('is-selected');
       Object.values(scenes).forEach(scene=>scene.style.removeProperty('opacity'));
       showCompleteFigures();
     }else{
@@ -1097,7 +1103,7 @@ if(threadAnimation){
   if('IntersectionObserver' in window){
     new IntersectionObserver(entries=>{
       const visible=entries.some(entry=>entry.isIntersecting);
-      if(sectionVisible&&!visible&&manualIndex!==null){
+      if(sectionVisible&&!visible&&manualIndex!==null&&!reducedMotion.matches){
         manualIndex=null;
         threadAnimation.classList.remove('is-manual');
         Object.values(scenes).forEach(scene=>scene.classList.remove('is-selected'));
@@ -1516,17 +1522,20 @@ if(systemAnimation){
     userPaused=false;
     systemAnimation.classList.remove('is-manual','is-engine-rest','is-paused');
     Object.values(scenes).forEach(scene=>scene.classList.remove('is-selected'));
-    scroller.show(!reducedMotion.matches);
+    scroller.show(true);
     scroller.update(0);
     if(reducedMotion.matches){
+      manualIndex=0;
       updatePlayback();
       systemAnimation.classList.remove('is-animated');
+      systemAnimation.classList.add('is-manual');
+      scenes.sequence.classList.add('is-selected');
       Object.values(scenes).forEach(scene=>scene.classList.remove('is-active'));
       resetFigures();
       systemAnimation.removeAttribute('tabindex');
       systemAnimation.removeAttribute('aria-pressed');
       systemAnimation.setAttribute('role','img');
-      systemAnimation.setAttribute('aria-label','Four diagrams showing task sequence, communication patterns, engine logic, and Digital Twin architecture');
+      systemAnimation.setAttribute('aria-label',diagramNames[0]);
     }else{
       elapsed=0;
       lastScene=-1;
@@ -1551,7 +1560,7 @@ if(systemAnimation){
   if('IntersectionObserver' in window){
     new IntersectionObserver(entries=>{
       const visible=entries.some(entry=>entry.isIntersecting);
-      if(sectionVisible&&!visible&&manualIndex!==null){
+      if(sectionVisible&&!visible&&manualIndex!==null&&!reducedMotion.matches){
         manualIndex=null;
         systemAnimation.classList.remove('is-manual');
         Object.values(scenes).forEach(scene=>scene.classList.remove('is-selected'));
