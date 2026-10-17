@@ -49,7 +49,7 @@
     progress.setAttribute('aria-hidden', 'true');
     document.querySelector('.page-loader-inner')?.append(progress);
     let completed = 0;
-    const updateProgress = () => { progress.textContent = `${completed} / ${allImages.length}`; };
+    const updateProgress = () => { progress.textContent = `${allImages.length ? Math.round((completed / allImages.length) * 100) : 100}%`; };
     updateProgress();
     await Promise.allSettled([
       document.fonts?.ready,
