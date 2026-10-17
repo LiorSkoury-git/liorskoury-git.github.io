@@ -1,0 +1,530 @@
+/* Source styles for the three user-provided thread diagrams, scoped to their inline SVGs. */
+/* Results-02.svg */
+
+      .thread-svg--flow .cls-1 {
+        fill: #d8aa79;
+      }
+
+      .thread-svg--flow .cls-2 {
+        opacity: .4;
+        stroke-dasharray: 6;
+      }
+
+      .thread-svg--flow .cls-2, .thread-svg--flow .cls-3, .thread-svg--flow .cls-4, .thread-svg--flow .cls-5, .thread-svg--flow .cls-6, .thread-svg--flow .cls-7, .thread-svg--flow .cls-8, .thread-svg--flow .cls-9, .thread-svg--flow .cls-10, .thread-svg--flow .cls-11, .thread-svg--flow .cls-12, .thread-svg--flow .cls-13, .thread-svg--flow .cls-14, .thread-svg--flow .cls-15, .thread-svg--flow .cls-16, .thread-svg--flow .cls-17 {
+        fill: none;
+        stroke-miterlimit: 10;
+      }
+
+      .thread-svg--flow .cls-2, .thread-svg--flow .cls-5, .thread-svg--flow .cls-6, .thread-svg--flow .cls-11 {
+        stroke-width: .5px;
+      }
+
+      .thread-svg--flow .cls-2, .thread-svg--flow .cls-11 {
+        stroke: #474748;
+      }
+
+      .thread-svg--flow .cls-18 {
+        fill: url(#thread-flow-linear-gradient-15);
+      }
+
+      .thread-svg--flow .cls-19 {
+        fill: url(#thread-flow-linear-gradient-13);
+      }
+
+      .thread-svg--flow .cls-20 {
+        fill: #80bac3;
+      }
+
+      .thread-svg--flow .cls-3 {
+        stroke-width: .76px;
+      }
+
+      .thread-svg--flow .cls-3, .thread-svg--flow .cls-7, .thread-svg--flow .cls-13 {
+        stroke: #3b5c63;
+      }
+
+      .thread-svg--flow .cls-21 {
+        letter-spacing: -.09em;
+      }
+
+      .thread-svg--flow .cls-22 {
+        fill: url(#thread-flow-linear-gradient-2);
+      }
+
+      .thread-svg--flow .cls-23 {
+        fill: url(#thread-flow-linear-gradient-10);
+      }
+
+      .thread-svg--flow .cls-24 {
+        fill: url(#thread-flow-linear-gradient-12);
+      }
+
+      .thread-svg--flow .cls-25 {
+        fill: #3a6670;
+      }
+
+      .thread-svg--flow .cls-26 {
+        letter-spacing: 0em;
+      }
+
+      .thread-svg--flow .cls-4, .thread-svg--flow .cls-15, .thread-svg--flow .cls-16 {
+        stroke: #80bac3;
+      }
+
+      .thread-svg--flow .cls-27 {
+        letter-spacing: -.02em;
+      }
+
+      .thread-svg--flow .cls-28 {
+        fill: #545554;
+      }
+
+      .thread-svg--flow .cls-29 {
+        fill: #fff;
+      }
+
+      .thread-svg--flow .cls-30 {
+        letter-spacing: -.07em;
+      }
+
+      .thread-svg--flow .cls-31 {
+        letter-spacing: 0em;
+      }
+
+      .thread-svg--flow .cls-32 {
+        fill: url(#thread-flow-linear-gradient-4);
+      }
+
+      .thread-svg--flow .cls-33 {
+        letter-spacing: -.09em;
+      }
+
+      .thread-svg--flow .cls-34 {
+        fill: #af712c;
+      }
+
+      .thread-svg--flow .cls-35 {
+        letter-spacing: 0em;
+      }
+
+      .thread-svg--flow .cls-36 {
+        letter-spacing: 0em;
+      }
+
+      .thread-svg--flow .cls-37 {
+        letter-spacing: -.02em;
+      }
+
+      .thread-svg--flow .cls-38 {
+        letter-spacing: -.03em;
+      }
+
+      .thread-svg--flow .cls-39, .thread-svg--flow .cls-40 {
+        font-family: Calibri, Calibri;
+      }
+
+      .thread-svg--flow .cls-39, .thread-svg--flow .cls-40, .thread-svg--flow .cls-41 {
+        font-size: 7px;
+      }
+
+      .thread-svg--flow .cls-39, .thread-svg--flow .cls-42, .thread-svg--flow .cls-41 {
+        opacity: .7;
+      }
+
+      .thread-svg--flow .cls-5, .thread-svg--flow .cls-6, .thread-svg--flow .cls-8, .thread-svg--flow .cls-9, .thread-svg--flow .cls-12, .thread-svg--flow .cls-17 {
+        stroke: #686868;
+      }
+
+      .thread-svg--flow .cls-43 {
+        fill: url(#thread-flow-linear-gradient-3);
+      }
+
+      .thread-svg--flow .cls-44 {
+        fill: url(#thread-flow-linear-gradient-5);
+      }
+
+      .thread-svg--flow .cls-6, .thread-svg--flow .cls-45 {
+        opacity: .15;
+      }
+
+      .thread-svg--flow .cls-46 {
+        letter-spacing: 0em;
+      }
+
+      .thread-svg--flow .cls-47 {
+        letter-spacing: 0em;
+      }
+
+      .thread-svg--flow .cls-48 {
+        letter-spacing: -.02em;
+      }
+
+      .thread-svg--flow .cls-7, .thread-svg--flow .cls-10, .thread-svg--flow .cls-16 {
+        stroke-width: .75px;
+      }
+
+      .thread-svg--flow .cls-49 {
+        fill: url(#thread-flow-linear-gradient-8);
+      }
+
+      .thread-svg--flow .cls-50 {
+        letter-spacing: -.02em;
+      }
+
+      .thread-svg--flow .cls-51 {
+        letter-spacing: -.08em;
+      }
+
+      .thread-svg--flow .cls-8 {
+        opacity: .5;
+        stroke-width: .15px;
+      }
+
+      .thread-svg--flow .cls-52 {
+        letter-spacing: 0em;
+      }
+
+      .thread-svg--flow .cls-9 {
+        stroke-width: .1px;
+      }
+
+      .thread-svg--flow .cls-53 {
+        letter-spacing: 0em;
+      }
+
+      .thread-svg--flow .cls-54 {
+        fill: url(#thread-flow-linear-gradient-14);
+      }
+
+      .thread-svg--flow .cls-10, .thread-svg--flow .cls-14 {
+        stroke: #bf7c2a;
+      }
+
+      .thread-svg--flow .cls-55 {
+        letter-spacing: 0em;
+      }
+
+      .thread-svg--flow .cls-56 {
+        letter-spacing: -.02em;
+      }
+
+      .thread-svg--flow .cls-57 {
+        fill: url(#thread-flow-linear-gradient-17);
+      }
+
+      .thread-svg--flow .cls-58 {
+        fill: url(#thread-flow-linear-gradient-7);
+      }
+
+      .thread-svg--flow .cls-59 {
+        fill: url(#thread-flow-linear-gradient-9);
+      }
+
+      .thread-svg--flow .cls-42, .thread-svg--flow .cls-60 {
+        font-size: 6px;
+      }
+
+      .thread-svg--flow .cls-42, .thread-svg--flow .cls-60, .thread-svg--flow .cls-41 {
+        font-family: Calibri-Light, Calibri;
+        font-weight: 300;
+      }
+
+      .thread-svg--flow .cls-12 {
+        stroke-width: .3px;
+      }
+
+      .thread-svg--flow .cls-61 {
+        fill: url(#thread-flow-linear-gradient-11);
+      }
+
+      .thread-svg--flow .cls-62 {
+        fill: #bf7c2a;
+      }
+
+      .thread-svg--flow .cls-63 {
+        fill: url(#thread-flow-linear-gradient-6);
+      }
+
+      .thread-svg--flow .cls-64 {
+        letter-spacing: 0em;
+      }
+
+      .thread-svg--flow .cls-65 {
+        fill: #3b5c63;
+      }
+
+      .thread-svg--flow .cls-66 {
+        letter-spacing: -.09em;
+      }
+
+      .thread-svg--flow .cls-67 {
+        letter-spacing: -.01em;
+      }
+
+      .thread-svg--flow .cls-68 {
+        fill: #7caab5;
+      }
+
+      .thread-svg--flow .cls-69 {
+        letter-spacing: 0em;
+      }
+
+      .thread-svg--flow .cls-70 {
+        letter-spacing: -.03em;
+      }
+
+      .thread-svg--flow .cls-15 {
+        stroke-width: .25px;
+      }
+
+      .thread-svg--flow .cls-71 {
+        fill: url(#thread-flow-linear-gradient-16);
+      }
+
+      .thread-svg--flow .cls-72 {
+        letter-spacing: -.02em;
+      }
+
+      .thread-svg--flow .cls-17 {
+        stroke-width: .5px;
+      }
+
+      .thread-svg--flow .cls-73 {
+        fill: url(#thread-flow-linear-gradient);
+      }
+
+      .thread-svg--flow .cls-74 {
+        letter-spacing: -.06em;
+      }
+    
+/* Results-12.svg */
+
+      .thread-svg--chart .cls-1 {
+        letter-spacing: 0em;
+      }
+
+      .thread-svg--chart .cls-2 {
+        font-size: 7px;
+      }
+
+      .thread-svg--chart .cls-2, .thread-svg--chart .cls-3, .thread-svg--chart .cls-4 {
+        font-family: Calibri, 'Segoe UI', sans-serif;
+      }
+
+      .thread-svg--chart .cls-5 {
+        stroke-width: .15px;
+      }
+
+      .thread-svg--chart .cls-5, .thread-svg--chart .cls-6 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .thread-svg--chart .cls-7 {
+        letter-spacing: 0em;
+      }
+
+      .thread-svg--chart .cls-8 {
+        fill: #e1c3a8;
+      }
+
+      .thread-svg--chart .cls-3 {
+        font-size: 3.49px;
+      }
+
+      .thread-svg--chart .cls-9 {
+        letter-spacing: 0em;
+      }
+
+      .thread-svg--chart .cls-10 {
+        fill: #99adb5;
+      }
+
+      .thread-svg--chart .cls-11 {
+        fill: #d39f6a;
+      }
+
+      .thread-svg--chart .cls-12 {
+        letter-spacing: .01em;
+      }
+
+      .thread-svg--chart .cls-13 {
+        fill: #cdd4d7;
+      }
+
+      .thread-svg--chart .cls-14 {
+        letter-spacing: -.09em;
+      }
+
+      .thread-svg--chart .cls-15 {
+        letter-spacing: 0em;
+      }
+
+      .thread-svg--chart .cls-16 {
+        letter-spacing: 0em;
+      }
+
+      .thread-svg--chart .cls-17 {
+        letter-spacing: -.06em;
+      }
+
+      .thread-svg--chart .cls-18 {
+        fill: #dbb188;
+      }
+
+      .thread-svg--chart .cls-19 {
+        letter-spacing: 0em;
+      }
+
+      .thread-svg--chart .cls-20 {
+        letter-spacing: -.02em;
+      }
+
+      .thread-svg--chart .cls-21 {
+        fill: #e5d5c8;
+      }
+
+      .thread-svg--chart .cls-22 {
+        letter-spacing: 0em;
+      }
+
+      .thread-svg--chart .cls-23 {
+        fill: #7f9ba4;
+      }
+
+      .thread-svg--chart .cls-24 {
+        fill: #658894;
+      }
+
+      .thread-svg--chart .cls-25 {
+        letter-spacing: 0em;
+      }
+
+      .thread-svg--chart .cls-26 {
+        fill: #ca8d4b;
+      }
+
+      .thread-svg--chart .cls-27 {
+        letter-spacing: 0em;
+      }
+
+      .thread-svg--chart .cls-28 {
+        letter-spacing: 0em;
+      }
+
+      .thread-svg--chart .cls-29 {
+        fill: #b3c1c6;
+      }
+
+      .thread-svg--chart .cls-30 {
+        letter-spacing: 0em;
+      }
+
+      .thread-svg--chart .cls-4 {
+        font-size: 4px;
+      }
+
+      .thread-svg--chart .cls-31 {
+        letter-spacing: -.01em;
+      }
+
+      .thread-svg--chart .cls-32 {
+        fill: #4a7684;
+      }
+
+      .thread-svg--chart .cls-33 {
+        fill: #e8e8e8;
+      }
+
+      .thread-svg--chart .cls-34 {
+        letter-spacing: -.04em;
+      }
+
+      .thread-svg--chart .cls-6 {
+        stroke-width: .23px;
+      }
+    
+/* Results-01.svg */
+
+      .thread-svg--totals .cls-1 {
+        letter-spacing: 0em;
+      }
+
+      .thread-svg--totals .cls-2 {
+        font-family: Calibri, 'Segoe UI', sans-serif;
+        font-size: 7px;
+      }
+
+      .thread-svg--totals .cls-3 {
+        letter-spacing: 0em;
+      }
+
+      .thread-svg--totals .cls-4 {
+        letter-spacing: 0em;
+      }
+
+      .thread-svg--totals .cls-5 {
+        fill: #545554;
+      }
+
+      .thread-svg--totals .cls-6 {
+        fill: none;
+        stroke: #545554;
+        stroke-miterlimit: 10;
+        stroke-width: .25px;
+      }
+
+      .thread-svg--totals .cls-7 {
+        letter-spacing: .02em;
+      }
+
+      .thread-svg--totals .cls-8 {
+        letter-spacing: 0em;
+      }
+
+      .thread-svg--totals .cls-9 {
+        letter-spacing: -.01em;
+      }
+
+      .thread-svg--totals .cls-10 {
+        letter-spacing: 0em;
+      }
+
+      .thread-svg--totals .cls-11 {
+        letter-spacing: -.05em;
+      }
+
+      .thread-svg--totals .cls-12 {
+        letter-spacing: 0em;
+      }
+
+      .thread-svg--totals .cls-13 {
+        letter-spacing: 0em;
+      }
+
+      .thread-svg--totals .cls-14 {
+        letter-spacing: 0em;
+      }
+
+      .thread-svg--totals .cls-15 {
+        letter-spacing: -.07em;
+      }
+
+      .thread-svg--totals .cls-16 {
+        letter-spacing: 0em;
+      }
+
+      .thread-svg--totals .cls-17 {
+        letter-spacing: 0em;
+      }
+
+      .thread-svg--totals .cls-18 {
+        letter-spacing: 0em;
+      }
+
+      .thread-svg--totals .cls-19 {
+        letter-spacing: -.01em;
+      }
+    

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: Calibri-Bold, Calibri;
+        font-size: 30px;
+        font-weight: 700;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2, .cls-4 {
+        stroke: #fff;
+      }
+
+      .cls-3 {
+        fill: #4a7684;
+        stroke: #3b5b63;
+        stroke-width: .23px;
+      }
+
+      .cls-5 {
+        letter-spacing: 0em;
+      }
+
+      .cls-6 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-4 {
+        fill: none;
+        stroke-width: 9px;
+      }
+    </style>
+  </defs>
+  <path class="cls-3" d="M211.9,55.39L130,8.1c-6.19-3.57-13.81-3.57-20,0L28.1,55.39c-6.19,3.57-10,10.18-10,17.32v94.58c0,7.15,3.81,13.75,10,17.32l81.9,47.29c6.19,3.57,13.81,3.57,20,0l81.9-47.29c6.19-3.57,10-10.18,10-17.32v-94.58c0-7.15-3.81-13.75-10-17.32Z"/>
+  <g>
+    <path class="cls-2" d="M118.43,44.11c-19.48,0-35.41,15.93-35.41,35.41s15.93,35.41,35.41,35.41,35.41-15.93,35.41-35.41-15.93-35.41-35.41-35.41ZM137.9,77.04l-29.74,33.28c-.35.35-.71.35-1.06.35s-.35-.35-.71-.35c-.35-.35-.71-.71-.35-1.42l9.56-23.02-15.23-1.42c-.35,0-1.06-.35-1.06-.71,0-.71,0-1.06.35-1.42l30.81-32.58c.35-.71,1.06-.71,1.42-.35s.71.71.35,1.42l-9.56,23.02,13.81.71h0c.71,0,1.06.35,1.77,1.06,0,.71,0,1.06-.35,1.42Z"/>
+    <path class="cls-4" d="M118.43,129.09c-27.26,0-49.57-22.31-49.57-49.57s22.31-49.57,49.57-49.57,49.57,22.31,49.57,49.57-22.31,49.57-49.57,49.57Z"/>
+  </g>
+  <text class="cls-1" transform="translate(76.21 164.9)"><tspan x="0" y="0">Ene</tspan><tspan class="cls-6" x="45.83" y="0">r</tspan><tspan x="56.15" y="0">gy</tspan><tspan x="-9.07" y="36">Moni</tspan><tspan class="cls-5" x="56.75" y="36">t</tspan><tspan x="66.86" y="36">or</tspan></text>
+</svg>

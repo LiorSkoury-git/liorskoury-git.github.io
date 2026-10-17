@@ -1,0 +1,618 @@
+/* System-04.svg */
+
+      .system-svg--sequence .system-sequence-cls-1 {
+        fill: none;
+        stroke: #4f4b49;
+      }
+
+      .system-svg--sequence .system-sequence-cls-1, .system-svg--sequence .system-sequence-cls-2, .system-svg--sequence .system-sequence-cls-3 {
+        stroke-miterlimit: 10;
+      }
+
+      .system-svg--sequence .system-sequence-cls-4 {
+        fill: #4f4b49;
+      }
+
+      .system-svg--sequence .system-sequence-cls-5 {
+        fill: #fff;
+      }
+
+      .system-svg--sequence .system-sequence-cls-6 {
+        letter-spacing: 0em;
+      }
+
+      .system-svg--sequence .system-sequence-cls-2 {
+        fill: #cdd4d7;
+      }
+
+      .system-svg--sequence .system-sequence-cls-2, .system-svg--sequence .system-sequence-cls-3 {
+        stroke: #000;
+        stroke-width: .25px;
+      }
+
+      .system-svg--sequence .system-sequence-cls-7 {
+        font-family: Calibri-Light, Calibri;
+        font-size: 16px;
+        font-weight: 300;
+      }
+
+      .system-svg--sequence .system-sequence-cls-3 {
+        fill: #e1c3a8;
+      }
+    
+
+/* System-05.svg */
+
+      .system-svg--patterns .system-patterns-cls-1 {
+        letter-spacing: .05em;
+      }
+
+      .system-svg--patterns .system-patterns-cls-2 {
+        letter-spacing: .06em;
+      }
+
+      .system-svg--patterns .system-patterns-cls-3 {
+        letter-spacing: .05em;
+      }
+
+      .system-svg--patterns .system-patterns-cls-4 {
+        letter-spacing: .03em;
+      }
+
+      .system-svg--patterns .system-patterns-cls-5, .system-svg--patterns .system-patterns-cls-6, .system-svg--patterns .system-patterns-cls-7 {
+        fill: #4f4b49;
+      }
+
+      .system-svg--patterns .system-patterns-cls-5, .system-svg--patterns .system-patterns-cls-8, .system-svg--patterns .system-patterns-cls-9, .system-svg--patterns .system-patterns-cls-10, .system-svg--patterns .system-patterns-cls-7 {
+        font-family: Calibri-Light, Calibri;
+        font-weight: 300;
+      }
+
+      .system-svg--patterns .system-patterns-cls-5, .system-svg--patterns .system-patterns-cls-8, .system-svg--patterns .system-patterns-cls-10, .system-svg--patterns .system-patterns-cls-7 {
+        font-size: 15px;
+      }
+
+      .system-svg--patterns .system-patterns-cls-5, .system-svg--patterns .system-patterns-cls-8, .system-svg--patterns .system-patterns-cls-11 {
+        letter-spacing: .06em;
+      }
+
+      .system-svg--patterns .system-patterns-cls-12 {
+        letter-spacing: .18em;
+      }
+
+      .system-svg--patterns .system-patterns-cls-13, .system-svg--patterns .system-patterns-cls-14 {
+        font-family: MyriadPro-Regular, 'Myriad Pro';
+        font-size: 18px;
+      }
+
+      .system-svg--patterns .system-patterns-cls-13, .system-svg--patterns .system-patterns-cls-9 {
+        fill: #fff;
+      }
+
+      .system-svg--patterns .system-patterns-cls-15 {
+        stroke-width: 2.33px;
+      }
+
+      .system-svg--patterns .system-patterns-cls-15, .system-svg--patterns .system-patterns-cls-16, .system-svg--patterns .system-patterns-cls-17, .system-svg--patterns .system-patterns-cls-18, .system-svg--patterns .system-patterns-cls-19, .system-svg--patterns .system-patterns-cls-20, .system-svg--patterns .system-patterns-cls-21 {
+        stroke-miterlimit: 10;
+      }
+
+      .system-svg--patterns .system-patterns-cls-15, .system-svg--patterns .system-patterns-cls-18, .system-svg--patterns .system-patterns-cls-19, .system-svg--patterns .system-patterns-cls-21 {
+        fill: none;
+      }
+
+      .system-svg--patterns .system-patterns-cls-15, .system-svg--patterns .system-patterns-cls-19 {
+        stroke: #4f4b49;
+      }
+
+      .system-svg--patterns .system-patterns-cls-16 {
+        fill: #b87f2b;
+        stroke-width: .36px;
+      }
+
+      .system-svg--patterns .system-patterns-cls-16, .system-svg--patterns .system-patterns-cls-17 {
+        stroke: #fff;
+      }
+
+      .system-svg--patterns .system-patterns-cls-22 {
+        letter-spacing: .08em;
+      }
+
+      .system-svg--patterns .system-patterns-cls-23 {
+        fill: #4b7785;
+      }
+
+      .system-svg--patterns .system-patterns-cls-24 {
+        letter-spacing: .06em;
+      }
+
+      .system-svg--patterns .system-patterns-cls-17 {
+        fill: #e1c3a8;
+        stroke-width: 2px;
+      }
+
+      .system-svg--patterns .system-patterns-cls-25 {
+        letter-spacing: .05em;
+      }
+
+      .system-svg--patterns .system-patterns-cls-18 {
+        stroke: #c27c16;
+      }
+
+      .system-svg--patterns .system-patterns-cls-26 {
+        letter-spacing: .06em;
+      }
+
+      .system-svg--patterns .system-patterns-cls-27 {
+        letter-spacing: .05em;
+      }
+
+      .system-svg--patterns .system-patterns-cls-28 {
+        letter-spacing: .07em;
+      }
+
+      .system-svg--patterns .system-patterns-cls-29 {
+        letter-spacing: .04em;
+      }
+
+      .system-svg--patterns .system-patterns-cls-30 {
+        letter-spacing: .04em;
+      }
+
+      .system-svg--patterns .system-patterns-cls-31 {
+        fill: #555;
+      }
+
+      .system-svg--patterns .system-patterns-cls-19 {
+        stroke-width: .5px;
+      }
+
+      .system-svg--patterns .system-patterns-cls-32 {
+        fill: #c27c16;
+      }
+
+      .system-svg--patterns .system-patterns-cls-20 {
+        fill: #cdd4d7;
+        stroke: #000;
+        stroke-width: .25px;
+      }
+
+      .system-svg--patterns .system-patterns-cls-33 {
+        letter-spacing: .18em;
+      }
+
+      .system-svg--patterns .system-patterns-cls-34 {
+        letter-spacing: .05em;
+      }
+
+      .system-svg--patterns .system-patterns-cls-9 {
+        font-size: 12px;
+      }
+
+      .system-svg--patterns .system-patterns-cls-35 {
+        letter-spacing: .06em;
+      }
+
+      .system-svg--patterns .system-patterns-cls-36 {
+        letter-spacing: .04em;
+      }
+
+      .system-svg--patterns .system-patterns-cls-37 {
+        letter-spacing: .17em;
+      }
+
+      .system-svg--patterns .system-patterns-cls-38 {
+        letter-spacing: .05em;
+      }
+
+      .system-svg--patterns .system-patterns-cls-39 {
+        fill: #1d1d1b;
+      }
+
+      .system-svg--patterns .system-patterns-cls-40 {
+        letter-spacing: .01em;
+      }
+
+      .system-svg--patterns .system-patterns-cls-41 {
+        letter-spacing: .05em;
+      }
+
+      .system-svg--patterns .system-patterns-cls-21 {
+        stroke: #4b7785;
+      }
+    
+
+/* System-01.svg */
+
+      .system-svg--engine .system-engine-cls-1 {
+        fill: #b87f2b;
+      }
+
+      .system-svg--engine .system-engine-cls-2, .system-svg--engine .system-engine-cls-3, .system-svg--engine .system-engine-cls-4, .system-svg--engine .system-engine-cls-5, .system-svg--engine .system-engine-cls-6, .system-svg--engine .system-engine-cls-7, .system-svg--engine .system-engine-cls-8, .system-svg--engine .system-engine-cls-9, .system-svg--engine .system-engine-cls-10, .system-svg--engine .system-engine-cls-11, .system-svg--engine .system-engine-cls-12 {
+        stroke-miterlimit: 10;
+      }
+
+      .system-svg--engine .system-engine-cls-2, .system-svg--engine .system-engine-cls-3, .system-svg--engine .system-engine-cls-4, .system-svg--engine .system-engine-cls-11 {
+        fill: none;
+      }
+
+      .system-svg--engine .system-engine-cls-2, .system-svg--engine .system-engine-cls-3, .system-svg--engine .system-engine-cls-10 {
+        stroke: #000;
+      }
+
+      .system-svg--engine .system-engine-cls-3 {
+        stroke-width: 1.05px;
+      }
+
+      .system-svg--engine .system-engine-cls-13 {
+        font-family: Calibri, Calibri;
+        font-size: 18px;
+      }
+
+      .system-svg--engine .system-engine-cls-4 {
+        stroke: #555;
+        stroke-width: 5.38px;
+      }
+
+      .system-svg--engine .system-engine-cls-14 {
+        fill: #99adb5;
+      }
+
+      .system-svg--engine .system-engine-cls-5 {
+        stroke-width: 1.28px;
+      }
+
+      .system-svg--engine .system-engine-cls-5, .system-svg--engine .system-engine-cls-6, .system-svg--engine .system-engine-cls-9, .system-svg--engine .system-engine-cls-12 {
+        fill: #e1c3a8;
+        stroke: #fff;
+      }
+
+      .system-svg--engine .system-engine-cls-6 {
+        stroke-width: 2px;
+      }
+
+      .system-svg--engine .system-engine-cls-15 {
+        letter-spacing: -.07em;
+      }
+
+      .system-svg--engine .system-engine-cls-16 {
+        letter-spacing: 0em;
+      }
+
+      .system-svg--engine .system-engine-cls-7 {
+        fill: #cdd4d7;
+        stroke: #2b2b2b;
+        stroke-width: .75px;
+      }
+
+      .system-svg--engine .system-engine-cls-8 {
+        fill: #fff;
+        stroke: #80b9c2;
+      }
+
+      .system-svg--engine .system-engine-cls-17 {
+        letter-spacing: -.08em;
+      }
+
+      .system-svg--engine .system-engine-cls-18 {
+        fill: #555;
+      }
+
+      .system-svg--engine .system-engine-cls-19 {
+        letter-spacing: -.01em;
+      }
+
+      .system-svg--engine .system-engine-cls-9 {
+        stroke-width: 2.48px;
+      }
+
+      .system-svg--engine .system-engine-cls-10 {
+        fill: #e8e8e8;
+        stroke-width: .43px;
+      }
+
+      .system-svg--engine .system-engine-cls-11 {
+        stroke: #b87f2b;
+      }
+
+      .system-svg--engine .system-engine-cls-20 {
+        letter-spacing: -.09em;
+      }
+
+      .system-svg--engine .system-engine-cls-21 {
+        font-size: 15px;
+      }
+
+      .system-svg--engine .system-engine-cls-21, .system-svg--engine .system-engine-cls-22, .system-svg--engine .system-engine-cls-23 {
+        font-family: Calibri-Light, Calibri;
+        font-weight: 300;
+      }
+
+      .system-svg--engine .system-engine-cls-24 {
+        letter-spacing: 0em;
+      }
+
+      .system-svg--engine .system-engine-cls-22 {
+        font-size: 16px;
+      }
+
+      .system-svg--engine .system-engine-cls-25 {
+        fill: #3b5c63;
+      }
+
+      .system-svg--engine .system-engine-cls-26 {
+        letter-spacing: -.03em;
+      }
+
+      .system-svg--engine .system-engine-cls-27 {
+        letter-spacing: -.03em;
+      }
+
+      .system-svg--engine .system-engine-cls-28 {
+        letter-spacing: -.02em;
+      }
+
+      .system-svg--engine .system-engine-cls-29 {
+        letter-spacing: -.01em;
+      }
+
+      .system-svg--engine .system-engine-cls-30 {
+        letter-spacing: -.01em;
+      }
+
+      .system-svg--engine .system-engine-cls-31 {
+        letter-spacing: -.02em;
+      }
+
+      .system-svg--engine .system-engine-cls-12 {
+        stroke-width: 2.2px;
+      }
+
+      .system-svg--engine .system-engine-cls-23 {
+        font-size: 13px;
+      }
+    
+
+/* System-00.svg */
+
+      .system-svg--overview .system-overview-cls-1 {
+        letter-spacing: 0em;
+      }
+
+      .system-svg--overview .system-overview-cls-2 {
+        letter-spacing: -.01em;
+      }
+
+      .system-svg--overview .system-overview-cls-3 {
+        fill: #80bac3;
+      }
+
+      .system-svg--overview .system-overview-cls-4 {
+        fill: #dbb188;
+      }
+
+      .system-svg--overview .system-overview-cls-4, .system-svg--overview .system-overview-cls-5, .system-svg--overview .system-overview-cls-6, .system-svg--overview .system-overview-cls-7, .system-svg--overview .system-overview-cls-8, .system-svg--overview .system-overview-cls-9, .system-svg--overview .system-overview-cls-10, .system-svg--overview .system-overview-cls-11, .system-svg--overview .system-overview-cls-12, .system-svg--overview .system-overview-cls-13, .system-svg--overview .system-overview-cls-14, .system-svg--overview .system-overview-cls-15, .system-svg--overview .system-overview-cls-16, .system-svg--overview .system-overview-cls-17, .system-svg--overview .system-overview-cls-18, .system-svg--overview .system-overview-cls-19, .system-svg--overview .system-overview-cls-20 {
+        stroke-miterlimit: 10;
+      }
+
+      .system-svg--overview .system-overview-cls-4, .system-svg--overview .system-overview-cls-10, .system-svg--overview .system-overview-cls-11, .system-svg--overview .system-overview-cls-13, .system-svg--overview .system-overview-cls-14, .system-svg--overview .system-overview-cls-15, .system-svg--overview .system-overview-cls-18, .system-svg--overview .system-overview-cls-19, .system-svg--overview .system-overview-cls-20 {
+        stroke-width: 2px;
+      }
+
+      .system-svg--overview .system-overview-cls-4, .system-svg--overview .system-overview-cls-11, .system-svg--overview .system-overview-cls-13, .system-svg--overview .system-overview-cls-14, .system-svg--overview .system-overview-cls-15, .system-svg--overview .system-overview-cls-18 {
+        stroke: #fff;
+      }
+
+      .system-svg--overview .system-overview-cls-5, .system-svg--overview .system-overview-cls-6, .system-svg--overview .system-overview-cls-7, .system-svg--overview .system-overview-cls-9, .system-svg--overview .system-overview-cls-12, .system-svg--overview .system-overview-cls-21, .system-svg--overview .system-overview-cls-16, .system-svg--overview .system-overview-cls-17 {
+        stroke: #000;
+      }
+
+      .system-svg--overview .system-overview-cls-5, .system-svg--overview .system-overview-cls-21 {
+        fill: none;
+      }
+
+      .system-svg--overview .system-overview-cls-22 {
+        letter-spacing: .18em;
+      }
+
+      .system-svg--overview .system-overview-cls-6 {
+        stroke-width: .5px;
+      }
+
+      .system-svg--overview .system-overview-cls-6, .system-svg--overview .system-overview-cls-9, .system-svg--overview .system-overview-cls-11 {
+        fill: #e8e8e8;
+      }
+
+      .system-svg--overview .system-overview-cls-7, .system-svg--overview .system-overview-cls-9, .system-svg--overview .system-overview-cls-12, .system-svg--overview .system-overview-cls-16 {
+        stroke-width: .25px;
+      }
+
+      .system-svg--overview .system-overview-cls-7, .system-svg--overview .system-overview-cls-14 {
+        fill: #99adb5;
+      }
+
+      .system-svg--overview .system-overview-cls-23 {
+        letter-spacing: -.01em;
+      }
+
+      .system-svg--overview .system-overview-cls-8 {
+        fill: #4a7683;
+        stroke: #3b5c63;
+        stroke-width: .15px;
+      }
+
+      .system-svg--overview .system-overview-cls-24 {
+        font-family: Calibri, Calibri;
+      }
+
+      .system-svg--overview .system-overview-cls-24, .system-svg--overview .system-overview-cls-25, .system-svg--overview .system-overview-cls-26, .system-svg--overview .system-overview-cls-27 {
+        font-size: 16px;
+      }
+
+      .system-svg--overview .system-overview-cls-24, .system-svg--overview .system-overview-cls-26, .system-svg--overview .system-overview-cls-15 {
+        fill: #b87f2b;
+      }
+
+      .system-svg--overview .system-overview-cls-10 {
+        stroke: #b87f2b;
+      }
+
+      .system-svg--overview .system-overview-cls-10, .system-svg--overview .system-overview-cls-19, .system-svg--overview .system-overview-cls-20 {
+        fill: #fff;
+      }
+
+      .system-svg--overview .system-overview-cls-25 {
+        fill: #474748;
+      }
+
+      .system-svg--overview .system-overview-cls-25, .system-svg--overview .system-overview-cls-28, .system-svg--overview .system-overview-cls-29, .system-svg--overview .system-overview-cls-30, .system-svg--overview .system-overview-cls-27, .system-svg--overview .system-overview-cls-31, .system-svg--overview .system-overview-cls-32 {
+        font-family: Calibri-Light, Calibri;
+        font-weight: 300;
+      }
+
+      .system-svg--overview .system-overview-cls-33 {
+        letter-spacing: -.02em;
+      }
+
+      .system-svg--overview .system-overview-cls-12 {
+        fill: #b3c1c6;
+      }
+
+      .system-svg--overview .system-overview-cls-13, .system-svg--overview .system-overview-cls-17 {
+        fill: #e1c3a8;
+      }
+
+      .system-svg--overview .system-overview-cls-34 {
+        letter-spacing: -.03em;
+      }
+
+      .system-svg--overview .system-overview-cls-35 {
+        letter-spacing: 0em;
+      }
+
+      .system-svg--overview .system-overview-cls-28 {
+        font-size: 14.63px;
+      }
+
+      .system-svg--overview .system-overview-cls-36 {
+        letter-spacing: -.04em;
+      }
+
+      .system-svg--overview .system-overview-cls-37 {
+        fill: #80b9c2;
+      }
+
+      .system-svg--overview .system-overview-cls-26 {
+        font-family: MyriadPro-Regular, 'Myriad Pro';
+      }
+
+      .system-svg--overview .system-overview-cls-38, .system-svg--overview .system-overview-cls-29, .system-svg--overview .system-overview-cls-32 {
+        isolation: isolate;
+      }
+
+      .system-svg--overview .system-overview-cls-21 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .system-svg--overview .system-overview-cls-39 {
+        letter-spacing: .04em;
+      }
+
+      .system-svg--overview .system-overview-cls-40 {
+        fill: #555;
+      }
+
+      .system-svg--overview .system-overview-cls-16, .system-svg--overview .system-overview-cls-18 {
+        fill: #cdd4d7;
+      }
+
+      .system-svg--overview .system-overview-cls-41 {
+        letter-spacing: .18em;
+      }
+
+      .system-svg--overview .system-overview-cls-42 {
+        letter-spacing: 0em;
+      }
+
+      .system-svg--overview .system-overview-cls-17 {
+        stroke-width: .3px;
+      }
+
+      .system-svg--overview .system-overview-cls-43 {
+        letter-spacing: -.01em;
+      }
+
+      .system-svg--overview .system-overview-cls-44 {
+        letter-spacing: -.08em;
+      }
+
+      .system-svg--overview .system-overview-cls-45 {
+        letter-spacing: 0em;
+      }
+
+      .system-svg--overview .system-overview-cls-29 {
+        font-size: 15.76px;
+      }
+
+      .system-svg--overview .system-overview-cls-30 {
+        font-size: 15px;
+      }
+
+      .system-svg--overview .system-overview-cls-46 {
+        letter-spacing: .17em;
+      }
+
+      .system-svg--overview .system-overview-cls-47 {
+        fill: #bf7c2a;
+      }
+
+      .system-svg--overview .system-overview-cls-48 {
+        letter-spacing: 0em;
+      }
+
+      .system-svg--overview .system-overview-cls-49 {
+        letter-spacing: 0em;
+      }
+
+      .system-svg--overview .system-overview-cls-31 {
+        font-size: 24px;
+        letter-spacing: .18em;
+      }
+
+      .system-svg--overview .system-overview-cls-50 {
+        fill: #3b5c63;
+      }
+
+      .system-svg--overview .system-overview-cls-51 {
+        letter-spacing: -.01em;
+      }
+
+      .system-svg--overview .system-overview-cls-52 {
+        letter-spacing: -.01em;
+      }
+
+      .system-svg--overview .system-overview-cls-53 {
+        letter-spacing: -.02em;
+      }
+
+      .system-svg--overview .system-overview-cls-32 {
+        font-size: 18.01px;
+      }
+
+      .system-svg--overview .system-overview-cls-19 {
+        stroke: #dbb188;
+      }
+
+      .system-svg--overview .system-overview-cls-20 {
+        stroke: #e1c3a8;
+      }
+
+      .system-svg--overview .system-overview-cls-54 {
+        letter-spacing: 0em;
+      }
+
+      .system-svg--overview .system-overview-cls-55 {
+        letter-spacing: .03em;
+      }
+    
