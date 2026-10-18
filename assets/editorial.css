@@ -339,6 +339,14 @@ html:has(.site-header.has-submenu) { scroll-padding-top: 128px }
 .placeholder-symbol { color: #497785 }
 .video-dialog { border-radius: 14px }
 .video-dialog::backdrop { background: rgba(38,47,48,.8) }
+.vitae-dialog { width: min(480px,calc(100% - 32px)); max-width: none; padding: clamp(26px,5vw,38px); border: 1px solid var(--line); border-top: 3px solid var(--accent-orange); border-radius: 12px; background: var(--paper); color: var(--ink); box-shadow: 0 24px 80px rgba(38,47,48,.28) }
+.vitae-dialog::backdrop { background: rgba(38,47,48,.7) }
+.vitae-dialog .eyebrow { color: var(--green); font-size: 10px; font-weight: 750; line-height: 1.5; letter-spacing: .16em }
+.vitae-dialog p { margin-top: 17px; color: var(--muted); font-size: 14px; line-height: 1.7 }
+.vitae-dialog .button { display: inline-flex; margin-top: 26px; background: var(--green); border-color: var(--green); color: var(--white) }
+.vitae-dialog .button:hover { background: #355e69; border-color: #355e69 }
+.vitae-dialog-close { position: absolute; top: 18px; right: 18px; width: 36px; height: 36px; padding: 0; border: 1px solid var(--line); border-radius: 7px; background: transparent; color: var(--ink); font-size: 20px; line-height: 1 }
+.vitae-dialog-close:hover { background: var(--soft) }
 .site-footer { background: var(--ink); color: var(--paper); border-top: 2px solid var(--accent-orange); padding: 72px 0 24px }
 .site-footer .eyebrow { color: #a8d0d4 }
 .footer-top { grid-template-columns: minmax(0,1fr) minmax(240px,.55fr); align-items: end; gap: clamp(48px,8vw,120px) }

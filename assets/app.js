@@ -756,6 +756,23 @@ dialog?.querySelector('.dialog-close')?.addEventListener('click',()=>dialog.clos
 dialog?.addEventListener('click',event=>{if(event.target===dialog){const box=dialog.getBoundingClientRect();if(event.clientX<box.left||event.clientX>box.right||event.clientY<box.top||event.clientY>box.bottom)dialog.close();}});
 dialog?.addEventListener('close',()=>{document.querySelector('#video-container').replaceChildren();videoTrigger?.focus();});
 
+const vitaeLink=document.querySelector('#main-nav a[download]');
+const vitaeDialog=document.querySelector('#vitae-dialog');
+vitaeLink?.addEventListener('click',event=>{
+  if(event.defaultPrevented || event.button!==0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || !vitaeDialog?.showModal)return;
+  // Let the link's normal download action run before showing the message.
+  setTimeout(()=>{if(!vitaeDialog.open)vitaeDialog.showModal();},0);
+});
+vitaeDialog?.querySelector('.vitae-dialog-close')?.addEventListener('click',()=>vitaeDialog.close());
+vitaeDialog?.addEventListener('click',event=>{
+  if(event.target!==vitaeDialog)return;
+  const box=vitaeDialog.getBoundingClientRect();
+  if(event.clientX<box.left || event.clientX>box.right || event.clientY<box.top || event.clientY>box.bottom)vitaeDialog.close();
+});
+vitaeDialog?.addEventListener('close',()=>{
+  (vitaeLink?.getClientRects().length ? vitaeLink : menu)?.focus();
+});
+
 const imageDialog=document.querySelector('#image-dialog');
 const imageDialogImage=document.querySelector('#image-dialog-image');
 let imageTrigger;
