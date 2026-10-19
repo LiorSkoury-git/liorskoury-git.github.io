@@ -126,6 +126,19 @@ if(submenuShell){
   let touchStartY;
   let closeTimer;
   const mobileSubmenu=()=>matchMedia('(max-width: 700px)').matches;
+  const footer=submenuShell.classList?.contains('side-submenu-shell')?document.querySelector('.site-footer'):null;
+  function keepSubmenuAboveFooter(){
+    if(!footer)return;
+    if(mobileSubmenu() || !submenuHeader.classList.contains('is-expanded')){
+      submenuShell.style.removeProperty('--side-menu-footer-shift');
+      submenuShell.classList.remove('is-near-footer');
+      return;
+    }
+    const menuBottom=window.innerHeight/2+submenuShell.getBoundingClientRect().height/2;
+    const shift=Math.max(0,Math.ceil(menuBottom+16-footer.getBoundingClientRect().top));
+    submenuShell.style.setProperty('--side-menu-footer-shift',`${shift}px`);
+    submenuShell.classList.toggle('is-near-footer',shift>0);
+  }
   function alignSubmenu(){
     const activeLink=nav?.querySelector('[aria-current="page"]');
     const anchor=menu && getComputedStyle(menu).display!=='none'?menu:activeLink;
@@ -152,8 +165,9 @@ if(submenuShell){
       : window.scrollY<24 || overHeader || overSubmenu || !!submenuHeader.querySelector(':focus-visible');
     submenuHeader.classList.toggle('is-expanded',expanded);
     submenuToggle?.setAttribute('aria-expanded',String(expanded));
+    keepSubmenuAboveFooter();
   }
-  function expandSubmenu(){if(mobileSubmenu())return;clearTimeout(closeTimer);submenuHeader.classList.add('is-expanded');}
+  function expandSubmenu(){if(mobileSubmenu())return;clearTimeout(closeTimer);submenuHeader.classList.add('is-expanded');keepSubmenuAboveFooter();}
   function scheduleCollapse(){clearTimeout(closeTimer);closeTimer=setTimeout(syncSubmenu,240);}
   headerBar.addEventListener('pointerenter',event=>{if(mobileSubmenu() || event.pointerType==='touch')return;overHeader=true;expandSubmenu();});
   headerBar.addEventListener('pointerleave',event=>{if(mobileSubmenu() || event.pointerType==='touch')return;overHeader=false;scheduleCollapse();});
@@ -294,9 +308,18 @@ if(scrollTransitions.length){
   window.addEventListener('resize',scheduleScrollTransitions);
 }
 
+const exploreCtas=[...document.querySelectorAll('.super-button')];
+if(exploreCtas.length){
+  if('IntersectionObserver' in window){
+    const observer=new IntersectionObserver(entries=>{
+      for(const entry of entries)entry.target.classList.toggle('is-visible',entry.isIntersecting);
+    });
+    exploreCtas.forEach(cta=>observer.observe(cta));
+  }else exploreCtas.forEach(cta=>cta.classList.add('is-visible'));
+}
+
 for(const slideshow of document.querySelectorAll('[data-capability-slideshow]')){
   const slides=[...slideshow.querySelectorAll('[data-capability-slide]')];
-  const topics=[...slideshow.parentElement.querySelectorAll('[data-capability-topic]')];
   if(slides.length<2)continue;
   const controls=slideshow.querySelector('[data-capability-controls]');
   const count=controls?.querySelector('[data-capability-count]');
@@ -312,12 +335,6 @@ for(const slideshow of document.querySelectorAll('[data-capability-slideshow]'))
       const active=i===currentSlide;
       slide.classList.toggle('is-active',active);
       slide.setAttribute('aria-hidden',String(!active));
-    });
-    topics.forEach((topic,i)=>{
-      const active=i===currentSlide;
-      topic.classList.toggle('is-active',active);
-      if(active)topic.setAttribute('aria-current','true');
-      else topic.removeAttribute('aria-current');
     });
     if(count)count.textContent=`${currentSlide+1} / ${slides.length}`;
   }
