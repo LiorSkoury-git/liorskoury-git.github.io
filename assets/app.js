@@ -608,7 +608,6 @@ async function selectTab(tab,manual=true){
   }
 }
 for(const tab of tabs){tab.addEventListener('click',()=>selectTab(tab));tab.addEventListener('keydown',event=>{const i=tabs.indexOf(tab);let next;if(['ArrowRight','ArrowDown'].includes(event.key))next=(i+1)%tabs.length;if(['ArrowLeft','ArrowUp'].includes(event.key))next=(i+tabs.length-1)%tabs.length;if(event.key==='Home')next=0;if(event.key==='End')next=tabs.length-1;if(next!==undefined){event.preventDefault();selectTab(tabs[next]);tabs[next].focus();}});}
-for(const node of document.querySelectorAll('[data-system-node]'))node.addEventListener('click',()=>{const tab=document.getElementById(`tab-${node.dataset.systemNode}`);if(tab)selectTab(tab);});
 if(systemExplorer && tabs.length>1 && !matchMedia('(prefers-reduced-motion: reduce)').matches){
   if('IntersectionObserver' in window){
     new IntersectionObserver(entries=>{
@@ -724,47 +723,8 @@ function wireSvgDiagram(diagram,nodes,kind){
 wireSvgDiagram(actorDiagram,actorNodes,'actor');
 wireSvgDiagram(serviceDiagram,serviceNodes,'service');
 
-const diagram=document.querySelector('.hero-diagram');
-const diagramIcons=[...(diagram?.querySelectorAll('.diagram-icon') || [])];
-const diagramHint=diagram?.querySelector('[data-diagram-hint]');
-const touchDiagram=matchMedia('(hover: none) and (pointer: coarse)');
-let touchSelectedIcon;
-function spreadDiagram(active){
-  const center=active?.getBoundingClientRect();
-  const ax=center ? center.left+center.width/2 : 0;
-  const ay=center ? center.top+center.height/2 : 0;
-  for(const icon of diagramIcons){
-    icon.classList.toggle('is-active',icon===active);
-    if(!active || icon===active){icon.style.removeProperty('--push-x');icon.style.removeProperty('--push-y');continue;}
-    const box=icon.getBoundingClientRect();
-    const dx=box.left+box.width/2-ax;
-    const dy=box.top+box.height/2-ay;
-    const distance=Math.hypot(dx,dy) || 1;
-    const strength=Math.max(0,1-distance/220)*18;
-    icon.style.setProperty('--push-x',`${(dx/distance*strength).toFixed(1)}px`);
-    icon.style.setProperty('--push-y',`${(dy/distance*strength).toFixed(1)}px`);
-  }
-}
-for(const icon of diagramIcons){
-  icon.addEventListener('pointerenter',event=>{if(event.pointerType!=='touch')spreadDiagram(icon);});
-  icon.addEventListener('pointerleave',event=>{if(event.pointerType!=='touch')spreadDiagram(diagram?.contains(document.activeElement)?document.activeElement:null);});
-  icon.addEventListener('focus',()=>spreadDiagram(icon));
-  icon.addEventListener('blur',()=>{if(!touchDiagram.matches || touchSelectedIcon!==icon)spreadDiagram(null);});
-  icon.addEventListener('click',event=>{
-    if(!touchDiagram.matches)return;
-    if(touchSelectedIcon===icon){touchSelectedIcon=undefined;return;}
-    event.preventDefault();
-    touchSelectedIcon=icon;
-    spreadDiagram(icon);
-    if(diagramHint)diagramHint.textContent=`${icon.getAttribute('aria-label').replace(/^Explore /,'')} selected. Tap again to explore.`;
-  });
-}
-document.addEventListener('pointerdown',event=>{
-  if(!touchDiagram.matches || diagram?.contains(event.target))return;
-  touchSelectedIcon=undefined;
-  spreadDiagram(null);
-  if(diagramHint)diagramHint.textContent='Tap an icon to preview, then tap again to explore.';
-});
+const robotHost=document.querySelector('[data-robot-scene]');
+if(robotHost)import('./robot-scene.js').then(module=>module.mountRobotScene(robotHost)).catch(error=>{robotHost.dataset.robotState='fallback';console.warn('Robot animation unavailable; displaying its still image.',error);});
 
 const dialog=document.querySelector('#video-dialog');
 let videoTrigger;

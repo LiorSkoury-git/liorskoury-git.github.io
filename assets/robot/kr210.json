@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "units": "metres",
+  "up": "Z",
+  "source": "kuka_kr210_support/KR210.urdf",
+  "links": [
+    {
+      "name": "base_link",
+      "positions": {
+        "byteOffset": 0,
+        "count": 28248
+      },
+      "normals": {
+        "byteOffset": 112992,
+        "count": 28248
+      },
+      "indices": {
+        "byteOffset": 225984,
+        "count": 25539
+      }
+    },
+    {
+      "name": "link_1",
+      "positions": {
+        "byteOffset": 328140,
+        "count": 131808
+      },
+      "normals": {
+        "byteOffset": 855372,
+        "count": 131808
+      },
+      "indices": {
+        "byteOffset": 1382604,
+        "count": 129987
+      }
+    },
+    {
+      "name": "link_2",
+      "positions": {
+        "byteOffset": 1902552,
+        "count": 46863
+      },
+      "normals": {
+        "byteOffset": 2090004,
+        "count": 46863
+      },
+      "indices": {
+        "byteOffset": 2277456,
+        "count": 52275
+      }
+    },
+    {
+      "name": "link_3",
+      "positions": {
+        "byteOffset": 2486556,
+        "count": 103371
+      },
+      "normals": {
+        "byteOffset": 2900040,
+        "count": 103371
+      },
+      "indices": {
+        "byteOffset": 3313524,
+        "count": 98535
+      }
+    },
+    {
+      "name": "link_4",
+      "positions": {
+        "byteOffset": 3707664,
+        "count": 11631
+      },
+      "normals": {
+        "byteOffset": 3754188,
+        "count": 11631
+      },
+      "indices": {
+        "byteOffset": 3800712,
+        "count": 10956
+      }
+    },
+    {
+      "name": "link_5",
+      "positions": {
+        "byteOffset": 3844536,
+        "count": 34563
+      },
+      "normals": {
+        "byteOffset": 3982788,
+        "count": 34563
+      },
+      "indices": {
+        "byteOffset": 4121040,
+        "count": 34425
+      }
+    },
+    {
+      "name": "link_6",
+      "positions": {
+        "byteOffset": 4258740,
+        "count": 9783
+      },
+      "normals": {
+        "byteOffset": 4297872,
+        "count": 9783
+      },
+      "indices": {
+        "byteOffset": 4337004,
+        "count": 9699
+      }
+    }
+  ]
+}
