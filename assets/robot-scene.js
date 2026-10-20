@@ -221,7 +221,7 @@ export async function mountRobotScene(host){
     cancelAnimationFrame(frame);frame=0;lastTime=0;
     toggle.setAttribute('aria-label',paused?'Play robot animation':'Pause robot animation');
     toggle.dataset.paused=String(paused);
-    if(visible&&!document.hidden&&!paused)frame=requestAnimationFrame(tick);
+    if(visible&&!document.hidden&&!paused&&!document.documentElement.classList.contains('is-loading'))frame=requestAnimationFrame(tick);
     else draw();
   }
   const resize=new ResizeObserver(entries=>{const {width,height}=entries[0].contentRect;scene.resize(width,height);draw();});resize.observe(host);
@@ -229,8 +229,9 @@ export async function mountRobotScene(host){
   toggle.hidden=false;toggle.addEventListener('click',()=>{if(paused&&reducedMotion.matches&&elapsed===CYCLE_SECONDS)elapsed=0;paused=!paused;sync();});
   const onMotion=()=>{paused=reducedMotion.matches;if(paused)elapsed=CYCLE_SECONDS;sync();};reducedMotion.addEventListener('change',onMotion);
   document.addEventListener('visibilitychange',sync);
+  window.addEventListener('portfolio:ready',sync);
   canvas.addEventListener('webglcontextlost',event=>{event.preventDefault();paused=true;cancelAnimationFrame(frame);canvas.style.opacity='';host.dataset.robotState='fallback';toggle.hidden=true;});
   host.dataset.robotState='ready';
   scene.resize(host.clientWidth,host.clientHeight);draw();sync();
-  window.addEventListener('pagehide',event=>{if(event.persisted)return;cancelAnimationFrame(frame);resize.disconnect();visibility.disconnect();reducedMotion.removeEventListener('change',onMotion);document.removeEventListener('visibilitychange',sync);scene.dispose();},{once:true});
+  window.addEventListener('pagehide',event=>{if(event.persisted)return;cancelAnimationFrame(frame);resize.disconnect();visibility.disconnect();reducedMotion.removeEventListener('change',onMotion);document.removeEventListener('visibilitychange',sync);window.removeEventListener('portfolio:ready',sync);scene.dispose();},{once:true});
 }

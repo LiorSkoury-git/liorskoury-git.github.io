@@ -1,4 +1,4 @@
-// Prepare every image used by this page before revealing its content.
+// Prepare page images and the hero's first 3D frame before revealing the content.
 // A manual exit is offered if a request stalls; normal loading still waits.
 (() => {
   const root = document.documentElement;
@@ -15,6 +15,7 @@
     setTimeout(() => {
       root.classList.remove('is-loading');
       root.classList.add('is-loaded');
+      window.dispatchEvent(new Event('portfolio:ready'));
       setTimeout(() => root.classList.remove('is-loaded'), reducedMotion.matches ? 0 : 400);
     }, delay);
   };
@@ -44,15 +45,18 @@
       return image;
     });
     const allImages = [...images, ...extras];
+    const sceneReady = window.portfolioSceneReady;
+    const total = allImages.length + (sceneReady ? 1 : 0);
     const progress = document.createElement('span');
     progress.className = 'page-loader-progress';
     progress.setAttribute('aria-hidden', 'true');
     document.querySelector('.page-loader-inner')?.append(progress);
     let completed = 0;
-    const updateProgress = () => { progress.textContent = `${allImages.length ? Math.round((completed / allImages.length) * 100) : 100}%`; };
+    const updateProgress = () => { progress.textContent = `${total ? Math.round((completed / total) * 100) : 100}%`; };
     updateProgress();
     await Promise.allSettled([
       document.fonts?.ready,
+      ...(sceneReady ? [Promise.resolve(sceneReady).finally(() => { completed++; updateProgress(); })] : []),
       ...allImages.map(image => {
         image.loading = 'eager';
         const ready = image.decode ? image.decode() : image.complete ? Promise.resolve() : new Promise(resolve => {

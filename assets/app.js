@@ -121,8 +121,7 @@ if(submenuShell){
   const submenuToggle=submenuHeader.querySelector('.home-submenu-toggle');
   let overHeader=false;
   let overSubmenu=false;
-  let mobileSubmenuOpen=window.scrollY<24;
-  let mobileScrollIntent;
+  let mobileSubmenuOpen=false;
   let touchStartY;
   let closeTimer;
   const mobileSubmenu=()=>matchMedia('(max-width: 700px)').matches;
@@ -179,55 +178,46 @@ if(submenuShell){
     const expanded=submenuHeader.classList.contains('is-expanded');
     closeMenu();
     mobileSubmenuOpen=!expanded;
-    mobileScrollIntent=undefined;
     syncSubmenu();
   });
   menu?.addEventListener('click',syncSubmenu);
   submenu.addEventListener('click',event=>{
     if(mobileSubmenu() && event.target.closest('a')){
       mobileSubmenuOpen=false;
-      mobileScrollIntent=undefined;
       syncSubmenu();
     }
   });
   document.addEventListener('pointerdown',event=>{
     if(!submenuHeader.contains(event.target)){
-      if(mobileSubmenu() && window.scrollY>=24){mobileSubmenuOpen=false;mobileScrollIntent=undefined;}
-      if(window.scrollY>=24)syncSubmenu();
+      if(mobileSubmenu())mobileSubmenuOpen=false;
+      syncSubmenu();
     }
   });
   document.addEventListener('touchstart',event=>{touchStartY=event.touches[0]?.clientY;},{passive:true});
   document.addEventListener('touchmove',event=>{
     if(!mobileSubmenu() || touchStartY===undefined)return;
     const delta=event.touches[0].clientY-touchStartY;
-    if(delta<-12){mobileScrollIntent='down';if(mobileSubmenuOpen){mobileSubmenuOpen=false;syncSubmenu();}}
-    else if(delta>12){mobileScrollIntent='up';if(window.scrollY<=4 && !mobileSubmenuOpen){mobileSubmenuOpen=true;mobileScrollIntent=undefined;syncSubmenu();}}
+    if(delta<-12 && mobileSubmenuOpen){mobileSubmenuOpen=false;syncSubmenu();}
   },{passive:true});
   document.addEventListener('touchend',()=>{touchStartY=undefined;},{passive:true});
   window.addEventListener('wheel',event=>{
     if(!mobileSubmenu() || Math.abs(event.deltaY)<2)return;
-    mobileScrollIntent=event.deltaY>0?'down':'up';
-    if(mobileScrollIntent==='down' && mobileSubmenuOpen){mobileSubmenuOpen=false;syncSubmenu();}
-    else if(mobileScrollIntent==='up' && window.scrollY<=4 && !mobileSubmenuOpen){mobileSubmenuOpen=true;mobileScrollIntent=undefined;syncSubmenu();}
+    if(event.deltaY>0 && mobileSubmenuOpen){mobileSubmenuOpen=false;syncSubmenu();}
   },{passive:true});
   document.addEventListener('keydown',event=>{
     if(!mobileSubmenu() || submenuHeader.contains(event.target) || event.target.closest('input, textarea, select'))return;
-    if(['PageDown','ArrowDown','End',' '].includes(event.key)){mobileScrollIntent='down';if(mobileSubmenuOpen){mobileSubmenuOpen=false;syncSubmenu();}}
-    else if(['Home','PageUp','ArrowUp'].includes(event.key))mobileScrollIntent='up';
+    if(['PageDown','ArrowDown','End',' '].includes(event.key) && mobileSubmenuOpen){mobileSubmenuOpen=false;syncSubmenu();}
   });
   submenuHeader.addEventListener('focusin',expandSubmenu);
   submenuHeader.addEventListener('focusout',()=>queueMicrotask(syncSubmenu));
   alignSubmenu();
   submenuHeader.classList.add('is-ready');
   syncSubmenu();
-  window.addEventListener('scroll',()=>{
-    if(mobileSubmenu() && mobileScrollIntent==='up' && window.scrollY<=4){mobileSubmenuOpen=true;mobileScrollIntent=undefined;}
-    syncSubmenu();
-  },{passive:true});
+  window.addEventListener('scroll',syncSubmenu,{passive:true});
   let wasMobile=mobileSubmenu();
   window.addEventListener('resize',()=>{
     const isMobile=mobileSubmenu();
-    if(isMobile!==wasMobile){mobileSubmenuOpen=window.scrollY<24;mobileScrollIntent=undefined;wasMobile=isMobile;}
+    if(isMobile!==wasMobile){mobileSubmenuOpen=false;wasMobile=isMobile;}
     alignSubmenu();syncSubmenu();
   });
   window.addEventListener('load',()=>{alignSubmenu();syncSubmenu();});
@@ -724,7 +714,8 @@ wireSvgDiagram(actorDiagram,actorNodes,'actor');
 wireSvgDiagram(serviceDiagram,serviceNodes,'service');
 
 const robotHost=document.querySelector('[data-robot-scene]');
-if(robotHost)import('./robot-scene.js').then(module=>module.mountRobotScene(robotHost)).catch(error=>{robotHost.dataset.robotState='fallback';console.warn('Robot animation unavailable; displaying its still image.',error);});
+// Module scripts run before DOMContentLoaded, so the loader can await the first render.
+if(robotHost)window.portfolioSceneReady=import('./robot-scene.js').then(module=>module.mountRobotScene(robotHost)).catch(error=>{robotHost.dataset.robotState='fallback';console.warn('Robot animation unavailable; displaying its still image.',error);});
 
 const dialog=document.querySelector('#video-dialog');
 let videoTrigger;
